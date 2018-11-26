@@ -1,4 +1,5 @@
-﻿using System;
+﻿using App1.Views;
+using System;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -12,21 +13,24 @@ namespace App1
             //InitializeComponent();
 
             //MainPage = new MainPage();
-            MainPage = new ContentPage()
-            {
-                Content = new StackLayout
-                {
-                    VerticalOptions = LayoutOptions.Center,
-                    Children =
-                    {
-                        new Label
-                        {
-                            HorizontalTextAlignment = TextAlignment.Center,
-                            Text = "Welcome to Xamarin Forms"
-                        }
-                    }
-                }
-            };
+
+            //MainPage = new ContentPage()
+            //{
+            //    Content = new StackLayout
+            //    {
+            //        VerticalOptions = LayoutOptions.Center,
+            //        Children =
+            //        {
+            //            new Label
+            //            {
+            //                HorizontalTextAlignment = TextAlignment.Center,
+            //                Text = "Welcome to Xamarin Forms"
+            //            }
+            //        }
+            //    }
+            //};
+
+            MainPage = new StackLayoutColors();
         }
 
         protected override void OnStart()
