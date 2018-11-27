@@ -17,13 +17,16 @@ namespace App1.Views
              Color.Maroon, Color.Yellow, Color.Olive, Color.Lime, Color.Green,
              Color.Aqua, Color.Teal, Color.Blue, Color.Navy, Color.Pink,
              Color.Fuchsia, Color.Purple
-            };            string[] colorNames =
+            };
+            string[] colorNames =
             {
              "White", "Silver", "Gray", "Black", "Red",
              "Maroon", "Yellow", "Olive", "Lime", "Green",
              "Aqua", "Teal", "Blue", "Navy", "Pink",
              "Fuchsia", "Purple"
-            };            StackLayout stackLayout = new StackLayout();
+            };
+
+            StackLayout stackLayout = new StackLayout();
 
             for (int i = 0; i < colors.Length; i++)
             {
@@ -35,7 +38,8 @@ namespace App1.Views
                 };
 
                 stackLayout.Children.Add(label);
-            }
+            }
+
             Content = stackLayout;
 
             switch (Device.RuntimePlatform)

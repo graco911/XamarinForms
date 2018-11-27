@@ -30,7 +30,7 @@ namespace App1
             //    }
             //};
 
-            MainPage = new StackLayoutColors();
+            MainPage = new BlackCatPage();
         }
 
         protected override void OnStart()
