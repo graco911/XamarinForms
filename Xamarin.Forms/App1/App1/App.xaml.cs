@@ -8,29 +8,18 @@ namespace App1
 {
     public partial class App : Application
     {
+        //const string displayLabelText = "displayLabelText";
+
+        public string DisplayLabelText { get; set; }
+
         public App()
         {
-            //InitializeComponent();
-
-            //MainPage = new MainPage();
-
-            //MainPage = new ContentPage()
+            //if (Properties.ContainsKey(displayLabelText))
             //{
-            //    Content = new StackLayout
-            //    {
-            //        VerticalOptions = LayoutOptions.Center,
-            //        Children =
-            //        {
-            //            new Label
-            //            {
-            //                HorizontalTextAlignment = TextAlignment.Center,
-            //                Text = "Welcome to Xamarin Forms"
-            //            }
-            //        }
-            //    }
-            //};
+            //    DisplayLabelText = (string)Properties[displayLabelText];
+            //}
 
-            MainPage = new BlackCatPage();
+            MainPage = new MonkeyTap();
         }
 
         protected override void OnStart()
@@ -41,6 +30,7 @@ namespace App1
         protected override void OnSleep()
         {
             // Handle when your app sleeps
+            //Properties[displayLabelText] = DisplayLabelText;
         }
 
         protected override void OnResume()
