@@ -1,4 +1,5 @@
-﻿using System;
+﻿using App1.Utils;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -17,6 +18,10 @@ namespace App1.Views
 
         const double offLuminosity = 0.4;
         const double onLuminosity = 0.75;
+
+        const int errorDuration = 500;
+
+        double[] frequencies = { 523.25, 622.25, 739.99, 880 };
 
         BoxView[] boxViews;
         Color[] colors = { Color.Red, Color.Blue, Color.Yellow, Color.Green };
@@ -74,6 +79,8 @@ namespace App1.Views
 
         private void FlashBoxView(int index)
         {
+            SoundPlayer.PlaySound(frequencies[index], flashDuration);
+
             boxViews[index].Color = colors[index].WithLuminosity(onLuminosity);
             Device.StartTimer(TimeSpan.FromMilliseconds(flashDuration), () => 
             {
@@ -122,6 +129,7 @@ namespace App1.Views
 
         protected virtual void EndGame()
         {
+            SoundPlayer.PlaySound(65.4, errorDuration);
             gameEnded = true;
 
             for (int index = 0; index < 4; index++)
